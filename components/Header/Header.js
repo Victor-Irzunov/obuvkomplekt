@@ -1,21 +1,21 @@
 "use client"
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Link as LinkScroll } from 'react-scroll';
 
-const THEMES = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"];
+// const THEMES = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"];
 
 export default function Header() {
-	const [theme, setTheme] = useState('light');
+	// const [theme, setTheme] = useState('light');
 
-	useEffect(() => {
-		document.documentElement.setAttribute('data-theme', theme)
-	}, [theme])
+	// useEffect(() => {
+	// 	document.documentElement.setAttribute('data-theme', theme)
+	// }, [theme])
 
-	const handleThemeChange = (e) => {
-		const val = e.target.getAttribute('data-set-theme');
-		setTheme(val)
-	}
+	// const handleThemeChange = (e) => {
+	// 	const val = e.target.getAttribute('data-set-theme');
+	// 	setTheme(val)
+	// }
 	return (
 		<header className='bg-base-100 sticky top-0 z-50'>
 			<div className='container mx-auto'>
@@ -141,7 +141,7 @@ export default function Header() {
 						</ul>
 					</div>
 					<div className="navbar-end">
-						<div className="dropdown dropdown-end">
+						{/* <div className="dropdown dropdown-end">
 							<label tabIndex={0} className="btn">
 							{THEMES.length} Themes
 							</label>
@@ -150,7 +150,11 @@ export default function Header() {
 									THEMES.map((theme, i) => <li key={theme + i}><button data-set-theme={theme} onClick={handleThemeChange} className="font-medium capitalize">{i + 1 + '. ' + theme}</button></li>)
 								}
 							</ul>
-						</div>
+						</div> */}
+
+						<a href='tel:' className='btn'>
+							+375 29 000-00-00
+						</a>
 					</div>
 				</div>
 			</div>
