@@ -21,6 +21,7 @@ const FormOrder = ({selectedProduct}) => {
 				<div className="form-control">
 					<label className="label">
 						<span className="label-text">Телефон</span>
+						<span className="label-text-alt">Обязательное поле</span>
 					</label>
 					<input
 						type="tel"
@@ -28,19 +29,20 @@ const FormOrder = ({selectedProduct}) => {
 						value={formData.phone}
 						onChange={handleChange}
 						placeholder="Ваш телефон"
-						className="input input-bordered"
+						className="input input-bordered xz:input-sm sd:input-lg"
 						required
 					/>
 				</div>
-				<div className="form-control">
+				<div className="form-control mt-3">
 					<label className="label">
 						<span className="label-text">Сообщение</span>
+						<span className="label-text-alt">Необязательное поле</span>
 					</label>
 					<textarea
 						name="message"
 						value={formData.message}
 						onChange={handleChange}
-						className="textarea textarea-bordered"
+						className="textarea textarea-bordered xz:textarea-sm sd:textarea-lg"
 						placeholder="Ваше сообщение"
 					></textarea>
 				</div>
